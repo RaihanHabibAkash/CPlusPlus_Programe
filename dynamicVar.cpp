@@ -49,6 +49,10 @@ int *p;
 
 void func() {
     int *x = new int;
+    // Deleting a dynamic variable
+    int *y = new int;
+    delete y;
+
     *x = 10;
     p = x;
 
