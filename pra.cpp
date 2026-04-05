@@ -1,32 +1,35 @@
 #include <bits/stdc++.h>
 using namespace std;
+int anton = 0;
+int danit = 0;
 
-int* fun(int n) {
-    int *arr = new int[n];
-
-    for(int i = 0; i < n; i++) {
-        cin >> arr[i];
+void rec(int n) {
+    if(n == 0) {
+        return;
     }
+     
+    char str;
+    cin >> str; 
 
-    return arr;
+    if(str == 'A') anton++;
+    else danit++; 
+    
+    rec(n - 1);
 }
 
 int main() {
-    int len;
-    cin >> len;
-    int *a = fun(len);
-    for(int i = 0; i < len; i++) {
-        cout << a[i] << " ";
-    }
+    int times;
+    cin >> times;
 
-    delete[] a;
+    rec(times);
 
-    for(int i = 0;i < len; i++) {
-        cout << a[i] << " ";
-    }
+    if(anton > danit) cout << "Anton" << endl;
+    else if(anton < danit) cout << "Danik" << endl;
+    else cout << "Friendship" << endl;
 
     return 0;
 }
+
 
 
 
