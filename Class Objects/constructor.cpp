@@ -9,6 +9,7 @@ using namespace std;
 class Student {
     // Access mofidire
     public:
+    char name[100];
     int roll;
     int cls;
     double gpa;
