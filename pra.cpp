@@ -1,3 +1,4 @@
+/*
 #include <bits/stdc++.h>
 using namespace std;
 int anton = 0;
@@ -29,7 +30,4 @@ int main() {
 
     return 0;
 }
-
-
-
-
+*/
