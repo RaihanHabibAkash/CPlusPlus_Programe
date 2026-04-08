@@ -44,6 +44,7 @@ int main() {
         }
         // Recizing len
         len = k;
+        str[len] = '\0';
 
         // for(int i = 0; i < len - 1; i++) {
         //     int minIndex = i;
@@ -52,15 +53,15 @@ int main() {
         //     }
         //     swap(str[minIndex], str[i]);
         // }
+
         // Sorting using build in function
         sort(str, str + len);
 
-        for(int i = 0; i < len; i++) {
-            cout << str[i];
-        }
-        cout << endl;
+        // Printing
+        cout << str << endl;
 
+    // While loop end
     }
 
     return 0;
-}        
+} 
