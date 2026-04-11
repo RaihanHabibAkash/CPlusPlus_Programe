@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Student {
+public:
+    string name;
+    int roll;
+    int marks;
+};
+
+// Custom compare function, return true or false
+bool cmp(Student a, Student b) {
+    // Always use return before ternery operator. because it's return true/false
+    return (a.marks == b.marks) ? (a.roll < b.roll) : (a.marks < b.marks);
+
+    /*
+    if(a.marks == b.marks) return a.roll < b.roll;
+    else return a.marks < b.marks;
+    */
+}
+
+int main() {
+    // Taking array len
+    int len;
+    cin >> len;
+
+    // Taking array of objects
+    Student arr[len];
+    for(int i = 0; i < len; i++) {
+        cin >> arr[i].name >> arr[i].roll >> arr[i].marks;
+    }
+
+    // Sending in cutsom compare function
+    sort(arr, arr + len, cmp);
+
+    // Printing output
+    cout << endl;
+    for(int i = 0; i < len; i++) {
+        cout << arr[i].name << " " << arr[i].roll << " " << arr[i].marks << endl;
+    }
+    
+    return 0;
+}
