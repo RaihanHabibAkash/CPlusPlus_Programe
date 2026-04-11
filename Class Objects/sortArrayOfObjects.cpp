@@ -10,6 +10,8 @@ public:
 
 // Custom compare function, return true or false
 bool cmp (Student a, Student b) {
+    // For checking how many times funciton is called
+    cout << "Hello" << endl;
     return a.marks > b.marks;
 }
 
