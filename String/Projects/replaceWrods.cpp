@@ -30,25 +30,16 @@ ITALYKOREA  ALGERIA Z
 using namespace std;
 
 int main() {
-    string s;
-    cin >> s;
+    string st;
+    cin >> st;
 
-    // size_t can be use
-    for(size_t i = 0; i < s.size(); i++) {
-        // if there is 4 char not available out of the loop.
-        if(i + 4 > s.size() - 1) break;
-
-        if(s[i] == 'E')
-            if(s[i + 1] == 'G')
-                if(s[i + 2] == 'Y')
-                    if(s[i + 3] == 'P')
-                        // Replacing if last one also true EGYPT wiht " ".
-                        if(s[i + 4] == 'T') s.replace(i, 5, " ");
-    // Forloop ends
+    while(st.find("EGYPT") != string::npos) {
+        int index = st.find("EGYPT");
+        st.replace(index, 5, " ");
     }
 
     // Output
-    cout << s << endl;
+    cout << st << endl;
 
     return 0;
 }
