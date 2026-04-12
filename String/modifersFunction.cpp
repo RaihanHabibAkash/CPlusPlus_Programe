@@ -34,6 +34,7 @@ int main() {
 
     // For insert()
     s.insert(5, "Akash");
+    // s.insert(s.begin() + 4, 'b');
 
     cout << s;
 
