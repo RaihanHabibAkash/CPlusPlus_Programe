@@ -2,9 +2,9 @@
 using namespace std;
 
 int main() {
-    string s = "akashEGYptFor";
-
-    cout << s.len();
+    string st = "AkashBro";
+    if(st.find("Akashh") != string::npos) cout << "Paisi" << endl;
+    else cout << "Pai nai" << endl;
 
     return 0;
 }
