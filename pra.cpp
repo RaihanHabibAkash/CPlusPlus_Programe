@@ -2,16 +2,15 @@
 using namespace std;
 
 int main() {
-    vector<int> v = {1,2,3,4,2,5,2};
-    for(int x : v) cout << x << " ";
-    cout << endl;
+    int n; cin >> n;
+
+    vector<string> v(n);
+    for(auto it = v.begin(); it < v.begin() + n; it++)
+        cin >> *it;
     
-    vector<int>::iterator it = find(v.begin(), v.end(), 100);
-
-    if(it == v.end()) cout << "Pai nai" << endl;
-    else cout << "Paisi" << endl;
-
-    cout << v.back() << endl;
+    for(string s : v)
+        cout << s << endl;
+    
 
     return 0;
 }
